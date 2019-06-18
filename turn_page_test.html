@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>page-turn test</title>
+
+    <script type="text/javaScript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" src="turn.js"></script>
+
+    <style type"text/css">
+      body{ background: #9988aa;}
+      #book{ width:1152px; height:400px;}
+      #book .turn-page{ background-color:#ddd; background-size:100% 100%;}
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- This is where navigational lists/links would go here -->
+        <a href="index.html">Homepage</a>
+        <a href="linking_to_files_example.html">External Links</a>
+        <a href="input_test.html">Input Test</a>
+      </nav>
+
+    </header>
+    <div id="book">
+      <div style="background-image:url('images/1.png');"></div>
+      <div style="background-image:url('images/2.png');"></div>
+      <div style="background-image:url('images/3.png');"></div>
+      <div style="background-image:url('images/4.png');"></div>
+      <div style="background-image:url('images/5.png');"></div>
+      <div style="background-image:url('images/6.png');"></div>
+      <div style="background-image:url('images/7.png');"></div>
+      <div style="background-image:url('images/8.png');"></div>
+    </div>
+
+    <script type="text/javascript">
+
+      $(window).ready(function()  {
+        $('#book').turn({
+          display: 'double',
+          acceleration: true,
+          elevation:500
+        });
+      });
+
+      $(window).bind('keydown', function(e){
+
+        if (e.keyCode==37)
+          $('#book').turn('previous');
+        else if (e.keyCode==39)
+          $('#book').turn('next');
+
+      });
+      </script>
+
+  </body>
+</html>
