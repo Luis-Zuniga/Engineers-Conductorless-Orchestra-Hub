@@ -6,18 +6,40 @@
 	<meta name="keywords" content="OCO, Olin, Orchestra, Engineering Orchestra, Engineers">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Input Test </title>
+	<style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		background-color: #111;
+	}
+	</style>
 </head>
-<body>
+<body style="background-color: lightgray;">
 	<header>
-		<nav>
-			<!-- This is where navigational lists/links would go here -->
-			<div><a href="index.html">Homepage</a></div>
-			<div><a href="turn_page_test.html">Turn.js Demo</a></div>
-			<div><a href="linking_to_files_example.html">External Links</a></div>
-			<div><a href="input_test.html">Input Test</a></div>
-
-		</nav>
-
+			<ul>
+			<li><a class="active" href="index.html">Home</a></li>
+			<li><a href="turn_page_test.html">Turn.js Demo</a></li>
+			<li><a href="linking_to_files_example.html">External Links</a></li>
+			<li><a href="input_test.html">Input Test</a></li>
+			</ul>
 	</header>
 	<form>
 		<div>Text: <input type="text" value="Enter some text"/></div>

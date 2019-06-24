@@ -16,19 +16,41 @@
       /*#book{ width:600px; height:500px;}*/
       #book .turn-page{ background-color:#ddd; background-size:100% 100%;}
     </style>
+    <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111;
+    }
+    </style>
   </head>
-  <body>
+  <body style="background-color: lightgray;">
     <header>
-			<nav>
-				<!-- This is where navigational lists/links would go here -->
-				<div><a href="index.html">Homepage</a></div>
-				<div><a href="turn_page_test.html">Turn.js Demo</a></div>
-				<div><a href="linking_to_files_example.html">External Links</a></div>
-				<div><a href="input_test.html">Input Test</a></div>
-
-			</nav>
-
-		</header>
+        <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="turn_page_test.html">Turn.js Demo</a></li>
+        <li><a href="linking_to_files_example.html">External Links</a></li>
+        <li><a href="input_test.html">Input Test</a></li>
+        </ul>
+    </header>
     <div id="book">
       <div style="background-image:url('images/1.png');"></div>
       <div style="background-image:url('images/2.png');"></div>
