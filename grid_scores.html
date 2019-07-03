@@ -6,11 +6,11 @@
   <meta name="Author" content="Luis F. Zuniga">
   <meta name="keywords" content="OCO, Olin, Orchestra, Engineering Orchestra, Engineers">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OCO Audio Tiles</title>
+  <title>OCO Program Tiles</title>
   <style>
     .grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(30rem, 1fr));
+      grid-template-columns:repeat(auto-fit, minmax(20rem, 1fr));
       grid-gap:.5em;
       grid-auto-rows: minmax(5rem, auto);
         }
@@ -48,7 +48,6 @@
 		li a:hover {
 		  background-color: #111;
 		}
-
   </style>
 </head>
 <body>
@@ -64,172 +63,44 @@
       </ul>
   </header>
   <main>
-    <h1>Spring Expo (May 13th, 2019)</h1>
-    <a href="programs/20190513_ExpoS_OCO.pdf" target="_blank">Concert Program (PDF)</a>
+    <h1>2018 - 2019</h1>
   <div class="grid">
     <div class="card">
       <div class="info">
-        <strong>Rondo from Serenade for Winds, K. 361</strong>
-        <p>Wolfgang Amadaeus Mozart</p>
+        <strong>Danzon No.2 - Arturo Marquez</strong>
+        <p>Arr. May 2nd, 2019</p>
       </div>
-      <button onclick="window.location.href = 'turn_audio.html';">View Score & Audio</button>
-      <button onclick="HideShow('Audio1')">View Audio</button>
-      <div id="Audio1">
-        <iframe
-        frameborder="0"
-        width= "100%"
-        autoplay
-        controls="controls"
-        src="https://drive.google.com/file/d/1tPla3rFwe8ebkDsHZR-1n6adA8ZJOC8E/preview">
-        </iframe>
-      </div>
-
+      <a href="scores/18-19/20190502_Danzon.pdf" target="_blank">Score (PDF)</a>
     </div>
     <div class="card">
       <div class="info">
-        <strong>Medley from Pirates of the Caribbean </strong>
-        <p>K. Badelt & T. Rickets</p>
+        <strong>Pirates of the Caribbean - Klaus Badelt/ Ted Ricketts</strong>
+        <p>Arr. April 9th, 2019</p>
       </div>
-      <button onclick="HideShow('Audio2')">View Audio</button>
-      <iframe id="Audio2"
-      frameborder="0"
-      width= "100%"
-      controls="controls"
-      src="https://drive.google.com/file/d/1lVu60qHonjLbB24hM-xim2ZIgQZ0vLFI/preview" >
-      </iframe>
+      <a href="scores/18-19/20190409_Pirates.pdf" target="_blank">Score (PDF)</a>
     </div>
     <div class="card">
       <div class="info">
-        <strong>Journey</strong>
-        <p>Joseph Lee</p>
+        <strong>Waltz from Serenade for Strings, op. 48 - P. I. Tchaikovsky</strong>
+        <p>Arr. April 2nd, 2019</p>
       </div>
-      <button onclick="HideShow('Audio3')">View Audio</button>
-      <iframe id="Audio3"
-      frameborder="0"
-      width= "100%"
-      controls="controls"
-      src="https://drive.google.com/file/d/1XqAeKMDHtXsvOWt0T8iMap0wyg7y2Vid/preview" >
-      </iframe>
+      <a href="scores/18-19/20190402_WaltzSerenade.pdf" target="_blank">Score (PDF)</a>
+    </div>
+    <div class="card">
+      <div class="info">
+        <strong>Hungarian March - Hector Berlioz</strong>
+        <p>Arr. April 2nd, 2019</p>
+      </div>
+      <a href="scores/18-19/20190402_Hungarian.pdf" target="_blank">Score (PDF)</a>
+    </div>
+    <div class="card">
+      <div class="info">
+        <strong>Rondo from Wind Serenade in Bb, K.361 - W. A. Mozart</strong>
+        <p>Arr. February 13th, 2019</p>
+      </div>
+      <a href="scores/18-19/20190213_WindsSerenade.pdf" target="_blank">Score (PDF)</a>
     </div>
   </div>
-  <h1>Ann Schaffner Concert (May 10th, 2019)</h1>
-  <a href="programs/20190510_ASchaff_OCO.pdf" target="_blank">Concert Program (PDF)</a>
-  <div class="grid">
-    <div class="card">
-      <div class="info">
-        <strong>Medley from Pirates of the Caribbean</strong>
-        <p>K. Badelt & T. Rickets</p>
-      </div>
-      <button onclick="HideShow('Audio4')">View Audio</button>
-      <iframe id="Audio4"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1p1cTN9yJniZbyuWmMwqGuxhsPJq6SjWN/preview" controls="controls"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Rondo from the Serenade for Winds, K. 361</strong>
-        <p>Wolfgang Amadaeus Mozart</p>
-      </div>
-      <button onclick="HideShow('Audio5')">View Audio</button>
-      <iframe id="Audio5"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1XR-1VvMtQRcp-d1XO-wqPZWSaI-fD230/preview" controls="controls"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Marche Hongroise from La Damnation de Faust</strong>
-        <p>H. Berlioz</p>
-      </div>
-      <button onclick="HideShow('Audio6')">View Audio</button>
-      <iframe id="Audio6"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1I9CT0CepOK4o2Dx-7zHPtsXNLuMXq0hH/preview" controls="controls"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Waltz from the Serenade for String Orchestra, op. 48</strong>
-        <p>P. I. Tchaikovsky</p>
-      </div>
-      <button onclick="HideShow('Audio7')">View Audio</button>
-      <iframe id="Audio7"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1Qa9UVV61ZtwEe6psLSivJresX_-k13EK/preview" controls="controls"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Danzon No. 2</strong>
-        <p>A. Marquez</p>
-      </div>
-      <button onclick="HideShow('Audio8')">View Audio</button>
-      <iframe id="Audio8"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1FoYkGsdv0dz9-IUZIrspnBy9ka_eRhmq/preview" controls="controls"></iframe>
-    </div>
-  </div>
-  <h1>Candidates' Weekend (Febuary 22nd, 2019)</h1>
-  <a href="programs/20190222_CW_OCO.pdf" target="_blank">Concert Program (PDF)</a>
-  <div class="grid">
-    <div class="card">
-      <div class="info">
-        <strong>Rondo from the Serenade for Winds, K. 361</strong>
-        <p>Wolfgang Amadaeus Mozart</p>
-      </div>
-      <button onclick="HideShow('Audio9')">View Audio</button>
-      <iframe id="Audio9"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1yc9UVxDaK3w9RXaCyKcvJJFK_3jGdj45/preview" controls="controls"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Marche Hongroise from La Damnation de Faust</strong>
-        <p>H. Berlioz</p>
-      </div>
-      <button onclick="HideShow('Audio10')">View Audio</button>
-      <iframe id="Audio10"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1_2vnJRhZHAQU5-tWNA1-9UDG_PGbtoJX/preview" controls="controls"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Medley from Pirates of the Caribbean</strong>
-        <p>K. Badelt & T. Rickets</p>
-      </div>
-      <button onclick="HideShow('Audio11')">View Audio</button>
-      <iframe id="Audio11"
-      frameborder="0"
-      width= "100%"src="https://drive.google.com/file/d/15ZIhLo8fgLk2e02zYw_jvmGPCYAbS0gn/preview" controls="controls"></iframe>
-    </div>
-
-  </div>
-  <script>
-  document.getElementById("Audio1").style.display="none";
-  document.getElementById("Audio2").style.display="none";
-  document.getElementById("Audio3").style.display="none";
-  document.getElementById("Audio4").style.display="none";
-  document.getElementById("Audio5").style.display="none";
-  document.getElementById("Audio6").style.display="none";
-  document.getElementById("Audio7").style.display="none";
-  document.getElementById("Audio8").style.display="none";
-  document.getElementById("Audio9").style.display="none";
-  document.getElementById("Audio10").style.display="none";
-  document.getElementById("Audio11").style.display="none";
-
-  function HideShow(ID) {
-    var x = document.getElementById(ID);
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-  </script>
   </main>
 </body>
 </html>
