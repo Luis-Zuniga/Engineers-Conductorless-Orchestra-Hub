@@ -7,49 +7,7 @@
   <meta name="keywords" content="OCO, Olin, Orchestra, Engineering Orchestra, Engineers">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OCO Audio Tiles</title>
-  <style>
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(30rem, 1fr));
-      grid-gap:.5em;
-      grid-auto-rows: minmax(5rem, auto);
-        }
-    .grid > div{
-      background:#eee;
-      padding:1em;
-    }
-    .grid > div:nth-child(odd){
-      background:#ddd;
-    }
-    iframe {
-      width: 100%;
-    }
-    img {
-      width: 100%;
-    }
-    ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333;
-      width: viewport;
-		}
-		li {
-		  float: left;
-		}
-		li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		}
-		li a:hover {
-		  background-color: #111;
-		}
-
-  </style>
+  <link rel="stylesheet" href="css/grid.css">
 </head>
 <body>
   <header>
@@ -73,6 +31,7 @@
         <p>Wolfgang Amadaeus Mozart</p>
       </div>
       <button onclick="window.location.href = 'turn_audio.html';">View Score & Audio</button>
+      <button onclick="window.location.href = 'turn_audio2.html';">View Score & Audio (alt)</button>
       <button onclick="HideShow('Audio1')">View Audio</button>
       <div id="Audio1">
         <iframe

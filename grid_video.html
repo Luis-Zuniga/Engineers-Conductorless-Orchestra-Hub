@@ -7,47 +7,7 @@
   <meta name="keywords" content="OCO, Olin, Orchestra, Engineering Orchestra, Engineers">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OCO Video Tiles</title>
-  <style>
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr));
-      grid-gap:.5em;
-      grid-auto-rows: minmax(15rem, auto);
-        }
-    .grid > div{
-      background:#eee;
-      padding:1em;
-    }
-    .grid > div:nth-child(odd){
-      background:#ddd;
-    }
-    iframe {
-      width: 100%;
-    }
-    img {
-      width: 100%;
-    }
-    ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333;
-		}
-		li {
-		  float: left;
-		}
-		li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		}
-		li a:hover {
-		  background-color: #111;
-		}
-  </style>
+  <link rel="stylesheet" href="css/grid.css">
 </head>
 <body>
   <header>
@@ -62,9 +22,9 @@
       </ul>
   </header>
   <main>
-    <h1>2019</h1>
-    <h1>2018</h1>
-    <h1>2017</h1>
+    <h1>Season 17 (Fall 2018 - Spring 2019)</h1>
+    <h1>Season 16 (Fall 2017 - Spring 2018)</h1>
+    <h1>Season 15 (Fall 2016 - Spring 2017)</h1>
   <div class="grid">
     <div class="card">
       <div class="info">
@@ -129,9 +89,6 @@
       <button onclick="HideShow('Video7')">View Video</button>
       <iframe id="Video7" width="560" height="315" src="https://www.youtube.com/embed/CwX1aJ5rpUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-  </div>
-  <h1>2016</h1>
-  <div class="grid">
     <div class="card">
       <div class="info">
         <strong>OCO Powers Hall</strong>
@@ -148,6 +105,17 @@
       <button onclick="HideShow('Video9')">View Video</button>
       <iframe id="Video9" width="560" height="315" src="https://www.youtube.com/embed/RS09pT1io7Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+    <div class="card">
+      <div class="info">
+        <strong>OCO Expo Fall 2016</strong>
+        <p>2016</p>
+      </div>
+      <button onclick="HideShow('Video13')">View Video</button>
+      <iframe id="Video13" width="560" height="315" src="https://www.youtube.com/embed/CU9wdEwW_UQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <h1>Season 14 (Fall 2015 - Spring 2016)</h1>
+  <div class="grid">
     <div class="card">
       <div class="info">
         <strong>OCO Spring Expo 2016</strong>
@@ -174,14 +142,14 @@
     </div>
     <div class="card">
       <div class="info">
-        <strong>OCO Expo Fall 2016</strong>
-        <p>2016</p>
+        <strong>OCO Fall Open House 2015</strong>
+        <p>October 25, 2015</p>
       </div>
-      <button onclick="HideShow('Video13')">View Video</button>
-      <iframe id="Video13" width="560" height="315" src="https://www.youtube.com/embed/CU9wdEwW_UQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <button onclick="HideShow('Video17')">View Video</button>
+      <iframe id="Video17" width="560" height="315" src="https://www.youtube.com/embed/VlkAZG106ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-  <h1>2015</h1>
+  <h1>Season 13 (Fall 2014 - Spring 2015)</h1>
   <div class="grid">
     <div class="card">
       <div class="info">
@@ -209,14 +177,14 @@
     </div>
     <div class="card">
       <div class="info">
-        <strong>OCO Fall Open House 2015</strong>
-        <p>October 25, 2015</p>
+        <strong>OCO Fall Expo 2014 pt.1</strong>
+        <p>2014</p>
       </div>
-      <button onclick="HideShow('Video17')">View Video</button>
-      <iframe id="Video17" width="560" height="315" src="https://www.youtube.com/embed/VlkAZG106ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <button onclick="HideShow('Video21')">View Video</button>
+      <iframe id="Video21" width="560" height="315" src="https://www.youtube.com/embed/fcmWujNXXZ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-  <h1>2014</h1>
+  <h1>Season 12 (Fall 2013 - Spring 2014)</h1>
   <div class="grid">
     <div class="card">
       <div class="info">
@@ -244,17 +212,6 @@
     </div>
     <div class="card">
       <div class="info">
-        <strong>OCO Fall Expo 2014 pt.1</strong>
-        <p>2014</p>
-      </div>
-      <button onclick="HideShow('Video21')">View Video</button>
-      <iframe id="Video21" width="560" height="315" src="https://www.youtube.com/embed/fcmWujNXXZ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-  <h1>2013</h1>
-  <div class="grid">
-    <div class="card">
-      <div class="info">
         <strong>OCO Fall Expo 2013 pt.1</strong>
         <p>December 20, 2013</p>
       </div>
@@ -269,6 +226,9 @@
       <button onclick="HideShow('Video23')">View Video</button>
       <iframe id="Video23" width="560" height="315" src="https://www.youtube.com/embed/ztLZGIZvGIQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+  </div>
+  <h1>Season 11 (Fall 2012 - Spring 2013)</h1>
+  <div class="grid">
     <div class="card">
       <div class="info">
         <strong>OCO Spring Expo 2013</strong>
@@ -278,8 +238,8 @@
       <iframe id="Video24" width="560" height="315" src="https://www.youtube.com/embed/o2gWDDTJ8y8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-  <h1>2012</h1>
-  <h1>2011</h1>
+  <h1>Season 10 (Fall 2011 - Spring 2012)</h1>
+  <h1>Season 9 (Fall 2010 - Spring 2011)</h1>
   <div class="grid">
     <div class="card">
       <div class="info">
