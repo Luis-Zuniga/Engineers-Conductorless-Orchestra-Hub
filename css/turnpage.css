@@ -2,6 +2,21 @@ body{ background: #9988aa;}
 #book{ width:68vw; height: 45vw; }
 /*#book{ width:600px; height:500px;}*/
 #book .turn-page{ background-color:#ddd; background-size:100% 100%;}
+#Score1{ width:68vw; height: 45vw; }
+/*#book{ width:600px; height:500px;}*/
+#Score1 .turn-page{ background-color:#ddd; background-size:100% 100%;}
+#Score2{ width:68vw; height: 45vw; }
+/*#book{ width:600px; height:500px;}*/
+#Score2 .turn-page{ background-color:#ddd; background-size:100% 100%;}
+#Score3{ width:68vw; height: 45vw; }
+/*#book{ width:600px; height:500px;}*/
+#Score3 .turn-page{ background-color:#ddd; background-size:100% 100%;}
+#Score4{ width:68vw; height: 45vw; }
+/*#book{ width:600px; height:500px;}*/
+#Score4 .turn-page{ background-color:#ddd; background-size:100% 100%;}
+#Score5{ width:68vw; height: 45vw; }
+/*#book{ width:600px; height:500px;}*/
+#Score5 .turn-page{ background-color:#ddd; background-size:100% 100%;}
 #wrapper{align: right;}
 ul {
   list-style-type: none;
@@ -9,12 +24,11 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  width: viewport;
 }
-
 li {
   float: left;
 }
-
 li a {
   display: block;
   color: white;
@@ -22,7 +36,6 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
 li a:hover {
   background-color: #111;
 }
