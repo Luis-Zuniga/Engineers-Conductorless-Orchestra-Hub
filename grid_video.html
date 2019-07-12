@@ -8,11 +8,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OCO Video Tiles</title>
   <link rel="stylesheet" href="css/grid.css">
+  <style>
+    /* Container holding the image and the text */
+    .container {
+    position: relative;
+    text-align: center;
+    color: white;
+    }
+    /* Centered text */
+    .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+
+    .crop {
+    width: auto;
+    height: minmax(200px,500px);
+    overflow: hidden;
+    }
+
+    .crop img {
+    width: 400px;
+    height: 300px;
+    margin: -50px 0px -50px 0px;
+    }
+
+    .outline {
+    color: #fff;
+    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+    }
+
+  </style>
 </head>
 <body>
   <header>
       <ul>
       <li><a href="index.html">Home</a></li>
+      <li><a href="seasons.html">Seasons</a></li>
       <li><a class="active_page" href="grid_video.html">OCO Videos</a></li>
       <li><a href="grid_audio.html">OCO Audio</a></li>
       <li><a href="grid_scores.html">OCO Scores</a></li>
@@ -27,14 +61,35 @@
     <h1>Season 15 (Fall 2016 - Spring 2017)</h1>
   <div class="grid">
     <div class="card">
-      <div class="info">
-        <strong>OCO Spring Expo 2017 pt.1</strong>
+      <div class="container" max-width="100%">
+        <!--<iframe class="backPic" frameborder="0" z-index= "-99" max-width="100%" scrolling="no" style="left: -100px; top: -100px"
+          src="http://img.youtube.com/vi/3nbilTM1ACw/0.jpg">
+        </iframe>-->
+        <div class="crop"><img src="http://img.youtube.com/vi/3nbilTM1ACw/0.jpg" alt="" overflow="hidden" z-indx="-99"></div>
+        <div class="centered">
+          <div class="outline">
+            <h1>Title</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+        <!--<iframe class="backPic" frameborder="0" z-index= "-99" height="100%" width="100%"
+          src="https://youtube.com/embed/3nbilTM1ACw?autoplay=1&controls=0&showinfo=0&autohide=1">
+        </iframe>-->
+        <div class="container" max-width="100%">
+          <!--<iframe class="backPic" frameborder="0" z-index= "-99" max-width="100%" scrolling="no" style="left: -100px; top: -100px"
+            src="http://img.youtube.com/vi/3nbilTM1ACw/0.jpg">
+          </iframe>-->
+      <div class="crop"><img src="http://img.youtube.com/vi/3nbilTM1ACw/0.jpg" alt="" overflow="hidden" z-index="-99"></div>
+      <div class="centered">
+        <div class="outline"><strong>OCO Spring Expo 2017 pt.1</strong>
         <p>May 8, 2017</p>
         <a href="programs/Paul_Programs/Expo Concerts/20170508_ExpoS_OCO.pdf" target="_blank">Concert Program (PDF)</a>
-      </div>
-      <button onclick="HideShow('Video1')">View Video</button>
-      <iframe id="Video1" width="560" height="315" src="https://www.youtube.com/embed/3nbilTM1ACw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+
+      <button onclick="HideShow('Video1')">View Video</button></div>
+      <iframe id="Video1" width="100%" height="100%" src="https://www.youtube.com/embed/3nbilTM1ACw" z-index="99"frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div></div></div>
     <div class="card">
       <div class="info">
         <strong>OCO Spring Expo 2017 pt.2</strong>
