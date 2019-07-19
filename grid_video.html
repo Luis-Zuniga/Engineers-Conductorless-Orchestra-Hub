@@ -26,12 +26,14 @@
     width: auto;
     height: minmax(200px,500px);
     overflow: hidden;
+
     }
 
     .crop img {
     width: 400px;
     height: 300px;
     margin: -50px 0px -50px 0px;
+    filter: blur(1px);
     }
 
     .outline {
@@ -44,19 +46,18 @@
 </head>
 <body>
   <header>
-      <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="seasons.html">Seasons</a></li>
-      <li><a class="active_page" href="grid_video.html">OCO Videos</a></li>
-      <li><a href="grid_audio.html">OCO Audio</a></li>
-      <li><a href="grid_scores.html">OCO Scores</a></li>
-      <li><a href="grid_programs.html">OCO Programs</a></li>
-      <li><a href="turn_program.html">Turn.js Demo</a></li>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a class="active_page" href="grid_video.html">OCO Videos</a></li>
+    <li><a href="grid_audio.html">OCO Scores+Audio</a></li>
+    <li><a href="early_history.html">Early History</a></li>
 
-      </ul>
+
+    </ul>
   </header>
   <main>
     <h1>Season 17 (Fall 2018 - Spring 2019)</h1>
+    <!--https://youtu.be/AM_Fv8r9bbw Ann Schaffner-->
     <h1>Season 16 (Fall 2017 - Spring 2018)</h1>
     <h1>Season 15 (Fall 2016 - Spring 2017)</h1>
   <div class="grid">
@@ -83,8 +84,8 @@
           </iframe>-->
       <div class="crop"><img src="http://img.youtube.com/vi/3nbilTM1ACw/0.jpg" alt="" overflow="hidden" z-index="-99"></div>
       <div class="centered">
-        <div class="outline"><strong>OCO Spring Expo 2017 pt.1</strong>
-        <p>May 8, 2017</p>
+        <div class="outline"><font size="6"><b>OCO Spring Expo 2017 pt.1</b></font>
+        <p size="10">May 8, 2017</p>
         <a href="programs/Paul_Programs/Expo Concerts/20170508_ExpoS_OCO.pdf" target="_blank">Concert Program (PDF)</a>
 
       <button onclick="HideShow('Video1')">View Video</button></div>
