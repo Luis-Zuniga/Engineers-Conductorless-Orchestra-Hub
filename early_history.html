@@ -9,46 +9,174 @@
   <title>OCO Early History</title>
   <link rel="stylesheet" href="css/grid.css">
   <style>
-    /* Container holding the image and the text */
-    .container {
-    position: relative;
-    text-align: center;
-    color: white;
-    }
-    /* Centered text */
-    .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);}
 
-    .crop {
-    width: auto;
-    height: minmax(200px,500px);
-    overflow: hidden;
+      @font-face {
+      font-family: "din-ot";
+      src: url("olin_fonts/DIN-OT/DINOT.eot");
+      src: url("olin_fonts/DIN-OT/DINOT.woff") format("woff"),
+      url("olin_fonts/DIN-OT/DINOT.otf") format("opentype"),
+      url("olin_fonts/DIN-OT/DINOT.svg") format("svg");
+      }
+      @font-face {
+      font-family: "din-ot-med";
+      src: url("olin_fonts/DIN-OT/DINOT-Medium.eot");
+      src: url("olin_fonts/DIN-OT/DINOT-Medium.woff") format("woff"),
+      url("olin_fonts/DIN-OT/DINOT-Medium.otf") format("opentype"),
+      url("olin_fonts/DIN-OT/DINOT-Medium.svg") format("svg");
+      }
+      @font-face {
+      font-family: "din-ot-bold";
+      src: url("olin_fonts/DIN-OT/DINOT-Bold.eot");
+      src: url("olin_fonts/DIN-OT/DINOT-Bold.woff") format("woff"),
+      url("olin_fonts/DIN-OT/DINOT-Bold.otf") format("opentype"),
+      url("olin_fonts/DIN-OT/DINOT-Bold.svg") format("svg");
+      }
+      .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(200px, 375px));
+        grid-gap:.5em;
+        grid-auto-rows: minmax(5rem, auto);
+          }
+      .grid > div{
+        background:#0087c6;
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -mox-border-radius-topright: 10px;
+        -mox-border-radius-bottomright: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -mox-border-radius-topleft: 10px;
+        -mox-border-radius-bottomleft: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+        /*padding:1em;*/
+      }
+      .info{
+        padding:1em;
+        color: black;
+      }
+      .grid > div:nth-child(odd){
+        background:#0087c6;
+      }
 
-    }
+      h1 {
+        font-family: din-ot-bold,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
 
-    .crop img {
-    width: 400px;
-    height: 300px;
-    margin: -50px 0px -50px 0px;
-    filter: blur(1px);
-    }
+      p {
+        font-family: din-ot,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
 
-    .outline {
-    color: #fff;
-    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
-    -webkit-font-smoothing: antialiased;
-    }
+      strong {
+        font-family: din-ot-med,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      ul {
+        font-family: din-ot-med,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      a {
+        font-family: din-ot,sans-serif;
+      font-style: normal;
+      font-weight:300;
+      }
+
+      iframe {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        width: viewport;
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -mox-border-radius-topright: 10px;
+        -mox-border-radius-bottomright: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -mox-border-radius-topleft: 10px;
+        -mox-border-radius-bottomleft: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      li {
+        float: left;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+
+      /* Container holding the image and the text */
+      .container {
+      position: relative;
+      text-align: center;
+      color: white;
+      }
+      /* Centered text */
+      .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      }
+
+      .crop {
+      width: auto;
+      height: minmax(200px,500px);
+      overflow: hidden;
+
+      }
+
+      .crop img {
+      width: 400px;
+      height: 300px;
+      margin: -50px 0px -50px 0px;
+      filter: blur(1px);
+      }
+
+      .outline {
+      color: #fff;
+      text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+      -webkit-font-smoothing: antialiased;
+      }
+
 
   </style>
 </head>
-<body>
+<body style="background-color: #faf7f4;">
   <header>
     <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="grid_video.html">OCO Videos</a></li>
+    <li><a href="grid_video.html">OCO Videos Ver.1</a></li>
+    <li><a href="grid_video2.html">OCO Videos Ver.2</a></li>
     <li><a href="grid_audio.html">OCO Scores+Audio</a></li>
     <li><a class="active_page" href="early_history.html">Early History</a></li>
 
@@ -56,308 +184,302 @@
   </header>
   <main>
 
-  <div class="grid">
-    <div class="card">
-      <div class="info">
-        <strong>Piano Trio in B Major - Brahms</strong>
-        <p>May 3, 2003</p>
+    <h1>Season 2 (Fall 2003 - Spring 2004)</h1>
+    <div class="grid">
+      <div class="card">
+        <div class="info">
+          <strong>Rhapsody in Blue - George Gershwin</strong>
+          <p>Mid-February 2004</p>
+        </div>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891163&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245896706&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Concerto in C Minor, k. 491, Highlights - W. A. Mozart</strong>
-        <p>FALL 2002</p>
+      <div class="card">
+        <div class="info">
+          <strong>Rhapsody in Blue - George Gershwin (Rehearsal)</strong>
+          <p>Mid-February 2004</p>
+        </div>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891118&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245894676&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Rhapsody in Blue Highlights - George Gershwin</strong>
-        <p>SPRING 2003</p>
+      <div class="card">
+        <div class="info">
+          <strong>Rhapsody in Blue - George Girshwin</strong>
+          <p>Late-February 2004</p>
+        </div>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891068&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245894624&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Sonata for Violin and Piano in G Major, Op. 30 No.3 - Beethoven</strong>
-        <p>December 13, 2002</p>
+      <div class="card">
+        <div class="info">
+          <strong>French Suite No. 5 in G Major, Mvt. V "Gavotte" - J. S. Bach</strong>
+          <p>May 5th, 2004</p>
+        </div>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830584&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245893800&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Sonatine for Bassoon and Piano - Alexandre Tansman</strong>
-        <p>May 3, 2003</p>
+      <div class="card">
+        <div class="info">
+          <strong>Brass Piece - J. S. Bach</strong>
+          <p>May 5th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830567&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245893730&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Sonata for Clarinet and Piano - Francis Poulenc</strong>
-        <p>December 13, 2002</p>
+      <div class="card">
+        <div class="info">
+          <strong>Transylvanian Dances, Mvt. III - Bela Bartok</strong>
+          <p>May 6th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830524&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245893652&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Concerto in C Minor, k. 491 - W. A. Mozart</strong>
-        <p>December 13, 2002</p>
+      <div class="card">
+        <div class="info">
+          <strong>Theme from the Simpsons - Danny Elfman</strong>
+          <p>May 6th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830506&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245893584&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>The Res Hall Piece from "A Day in the Life (of an Olin Student)" - Grant Hutchins</strong>
-        <p>Recorded 2002-2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Transylvanian Dances, Mvt. I - Bela Bartok </strong>
+          <p>May 6th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830428&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891662&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Leaving for Tir Na Nog - Erin Dowd</strong>
-        <p>Recorded 2002-2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Diana Dabby Introduces the Musicians</strong>
+          <p>May 6th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830413&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891636&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Self-Portrait - Luis Cabezas</strong>
-        <p>Recorded 2002-2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Diana Summarizes and Introduces the Musicians</strong>
+          <p>May 5th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830362&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891612&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Darkness - Amanda Blackwood</strong>
-        <p>Recorded 2002-2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Rhapsody on a Theme of Paganini - Sergei Rachmaninoff (Selected Variations)</strong>
+          <p>May 6th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830321&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891586&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Manchild - Jared Frey</strong>
-        <p>Recorded 2002-2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Trumpet Piece - Jacob Basson</strong>
+          <p>May 5th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830130&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891563&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Let's Go - Natalie Peterson</strong>
-        <p>Recorded 2002-2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Collective Creativity Wired Ensemble Pieces - Various Artists</strong>
+          <p>May 5th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830105&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891531&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Blue - Jacob Graham</strong>
-        <p>Recorded 2002-2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Hero Piece - Chris Doyle</strong>
+          <p>May 5th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245829828&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891514&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Beethoven Sonata in G Minor, op.5 nr. 2 for Cello and Piano - Beethoven </strong>
-        <p>Recorded 2002-2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Transylvanian Dances, Mvt. IV - Bela Bartok</strong>
+          <p>May 6th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245829629&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891496&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>4 Trumpet - Jacob Basson</strong>
-        <p>Recorded 2002-2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Transylvanian Dances, Mvt. II - Bela Bartok</strong>
+          <p>May 6th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245829603&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891431&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Rhapsody in Blue - George Gershwin</strong>
-        <p>Mid-February 2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>I'll Remember April - Gene de Paul</strong>
+          <p>May 5th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245826201&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891163&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Rhapsody in Blue - George Gershwin (Rehearsal)</strong>
-        <p>Mid-February 2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Rhapsody on a Theme of Paganini, Selected Variations - Sergei Rachmaninoff </strong>
+          <p>May 5th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245825670&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891118&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Rhapsody in Blue - George Girshwin</strong>
-        <p>Late-February 2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Summertime - George Gershwin</strong>
+          <p>May 5th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245825627&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891068&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>French Suite No. 5 in G Major, Mvt. V "Gavotte" - J. S. Bach</strong>
-        <p>May 5th, 2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Rhapsody on a Theme of Paganini Variation 21 & Finale - Sergei Rachmaninoff </strong>
+          <p>May 6th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245825598&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830584&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Brass Piece - J. S. Bach</strong>
-        <p>May 5th, 2004</p>
+      <div class="card">
+        <div class="info">
+          <strong>Theme from The Simpsons - Danny Elfman</strong>
+          <p>May 6th, 2004</p>
+        </div>
+        <button onclick="HideShow('Audio1')">Show Audio Player</button>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245825579&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
       </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830567&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Transylvanian Dances, Mvt. III - Bela Bartok</strong>
-        <p>May 6th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830524&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Theme from the Simpsons - Danny Elfman</strong>
-        <p>May 6th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830506&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Transylvanian Dances, Mvt. I - Bela Bartok </strong>
-        <p>May 6th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830428&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Diana Dabby Introduces the Musicians</strong>
-        <p>May 6th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830413&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Diana Summarizes and Introduces the Musicians</strong>
-        <p>May 5th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830362&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Rhapsody on a Theme of Paganini - Sergei Rachmaninoff (Selected Variations)</strong>
-        <p>May 6th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830321&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Trumpet Piece - Jacob Basson</strong>
-        <p>May 5th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830130&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Collective Creativity Wired Ensemble Pieces - Various Artists</strong>
-        <p>May 5th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245830105&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Hero Piece - Chris Doyle</strong>
-        <p>May 5th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245829828&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Transylvanian Dances, Mvt. IV - Bela Bartok</strong>
-        <p>May 6th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245829629&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Transylvanian Dances, Mvt. II - Bela Bartok</strong>
-        <p>May 6th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245829603&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>I'll Remember April - Gene de Paul</strong>
-        <p>May 5th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245826201&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Rhapsody on a Theme of Paganini, Selected Variations - Sergei Rachmaninoff </strong>
-        <p>May 5th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245825670&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Summertime - George Gershwin</strong>
-        <p>May 5th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245825627&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Rhapsody on a Theme of Paganini Variation 21 & Finale - Sergei Rachmaninoff </strong>
-        <p>May 6th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245825598&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
-    <div class="card">
-      <div class="info">
-        <strong>Theme from The Simpsons - Danny Elfman</strong>
-        <p>May 6th, 2004</p>
-      </div>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245825579&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-    </div>
 
-  </div>
+    </div>
+    <h1>Season 1 (Fall 2002 - Spring 2003)</h1>
+    <div class="grid">
+      <div class="card">
+          <div class="info" z-index="-99">
+            <strong>Piano Trio in B Major - Brahms</strong>
+            <p>May 3, 2003</p>
+          </div>
+        <div class="overlay">
+        <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245896706&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div></div>
+      <div class="card">
+        <div class="info">
+          <strong>Concerto in C Minor, k. 491, Highlights - W. A. Mozart</strong>
+          <p>FALL 2002</p>
+        </div>
+        <button onclick="HideShow('Audio2')">Show Audio Player</button>
+        <iframe id="Audio2" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245894676&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Rhapsody in Blue Highlights - George Gershwin</strong>
+          <p>SPRING 2003</p>
+        </div>
+        <button onclick="HideShow('Audio3')">Show Audio Player</button>
+        <iframe id="Audio3" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245894624&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Sonata for Violin and Piano in G Major, Op. 30 No.3 - Beethoven</strong>
+          <p>December 13, 2002</p>
+        </div>
+        <button onclick="HideShow('Audio4')">Show Audio Player</button>
+        <iframe id="Audio4" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245893800&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Sonatine for Bassoon and Piano - Alexandre Tansman</strong>
+          <p>May 3, 2003</p>
+        </div>
+        <button onclick="HideShow('Audio5')">Show Audio Player</button>
+        <iframe id="Audio5" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245893730&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Sonata for Clarinet and Piano - Francis Poulenc</strong>
+          <p>December 13, 2002</p>
+        </div>
+        <button onclick="HideShow('Audio6')">Show Audio Player</button>
+        <iframe id="Audio6" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245893652&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Concerto in C Minor, k. 491 - W. A. Mozart</strong>
+          <p>December 13, 2002</p>
+        </div>
+        <iframe id="Audio7" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245893584&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+
+    </div>
+    <h1>Other</h1>
+    <div class="grid">
+      <div class="card">
+        <div class="info">
+          <strong>The Res Hall Piece from "A Day in the Life (of an Olin Student)" - Grant Hutchins</strong>
+          <p>Recorded 2002-2004</p>
+        </div>
+        <iframe id="Audio8" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891662&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Leaving for Tir Na Nog - Erin Dowd</strong>
+          <p>Recorded 2002-2004</p>
+        </div>
+        <iframe id="Audio9" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891636&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Self-Portrait - Luis Cabezas</strong>
+          <p>Recorded 2002-2004</p>
+        </div>
+        <iframe id="Audio10" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891612&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Darkness - Amanda Blackwood</strong>
+          <p>Recorded 2002-2004</p>
+        </div>
+        <iframe id="Audio11" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891586&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Manchild - Jared Frey</strong>
+          <p>Recorded 2002-2004</p>
+        </div>
+        <iframe id="Audio12" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891563&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Let's Go - Natalie Peterson</strong>
+          <p>Recorded 2002-2004</p>
+        </div>
+        <iframe id="Audio14" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891531&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Blue - Jacob Graham</strong>
+          <p>Recorded 2002-2004</p>
+        </div>
+        <iframe id="Audio15" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891514&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>Beethoven Sonata in G Minor, op.5 nr. 2 for Cello and Piano - Beethoven </strong>
+          <p>Recorded 2002-2004</p>
+        </div>
+        <iframe id="Audio16" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891496&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+      <div class="card">
+        <div class="info">
+          <strong>4 Trumpet - Jacob Basson</strong>
+          <p>Recorded 2002-2004</p>
+        </div>
+        <iframe id="Audio17" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245891431&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </div>
+
+    </div>
 
   <script>
-  document.getElementById("Audio1").style.display="none";
 
   function HideShow(ID) {
     var x = document.getElementById(ID);

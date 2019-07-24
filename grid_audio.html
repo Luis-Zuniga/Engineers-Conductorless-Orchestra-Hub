@@ -7,13 +7,174 @@
   <meta name="keywords" content="OCO, Olin, Orchestra, Engineering Orchestra, Engineers">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OCO Audio Tiles</title>
-  <link rel="stylesheet" href="css/grid.css">
+  <style>
+
+      @font-face {
+      font-family: "din-ot";
+      src: url("olin_fonts/DIN-OT/DINOT.eot");
+      src: url("olin_fonts/DIN-OT/DINOT.woff") format("woff"),
+      url("olin_fonts/DIN-OT/DINOT.otf") format("opentype"),
+      url("olin_fonts/DIN-OT/DINOT.svg") format("svg");
+      }
+      @font-face {
+      font-family: "din-ot-med";
+      src: url("olin_fonts/DIN-OT/DINOT-Medium.eot");
+      src: url("olin_fonts/DIN-OT/DINOT-Medium.woff") format("woff"),
+      url("olin_fonts/DIN-OT/DINOT-Medium.otf") format("opentype"),
+      url("olin_fonts/DIN-OT/DINOT-Medium.svg") format("svg");
+      }
+      @font-face {
+      font-family: "din-ot-bold";
+      src: url("olin_fonts/DIN-OT/DINOT-Bold.eot");
+      src: url("olin_fonts/DIN-OT/DINOT-Bold.woff") format("woff"),
+      url("olin_fonts/DIN-OT/DINOT-Bold.otf") format("opentype"),
+      url("olin_fonts/DIN-OT/DINOT-Bold.svg") format("svg");
+      }
+      .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(200px, 375px));
+        grid-gap:.5em;
+        grid-auto-rows: minmax(5rem, auto);
+          }
+      .grid > div{
+        background:#0087c6;
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -mox-border-radius-topright: 10px;
+        -mox-border-radius-bottomright: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -mox-border-radius-topleft: 10px;
+        -mox-border-radius-bottomleft: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+        /*padding:1em;*/
+      }
+      .info{
+        padding:1em;
+        color: black;
+      }
+      .grid > div:nth-child(odd){
+        background:#0087c6;
+      }
+
+      h1 {
+        font-family: din-ot-bold,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      p {
+        font-family: din-ot,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      strong {
+        font-family: din-ot-med,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      ul {
+        font-family: din-ot-med,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      a {
+        font-family: din-ot,sans-serif;
+      font-style: normal;
+      font-weight:300;
+      }
+
+      iframe {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        width: viewport;
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -mox-border-radius-topright: 10px;
+        -mox-border-radius-bottomright: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -mox-border-radius-topleft: 10px;
+        -mox-border-radius-bottomleft: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      li {
+        float: left;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+
+      /* Container holding the image and the text */
+      .container {
+      position: relative;
+      text-align: center;
+      color: white;
+      }
+      /* Centered text */
+      .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      }
+
+      .crop {
+      width: auto;
+      height: minmax(200px,500px);
+      overflow: hidden;
+
+      }
+
+      .crop img {
+      width: 400px;
+      height: 300px;
+      margin: -50px 0px -50px 0px;
+      filter: blur(1px);
+      }
+
+      .outline {
+      color: #fff;
+      text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+      -webkit-font-smoothing: antialiased;
+      }
+
+  </style>
 </head>
-<body>
+<body style="background-color: #faf7f4;">
   <header>
     <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="grid_video.html">OCO Videos</a></li>
+    <li><a href="grid_video.html">OCO Videos Ver.1</a></li>
+    <li><a href="grid_video2.html">OCO Videos Ver.2</a></li>
     <li><a class="active_page" href="grid_audio.html">OCO Scores+Audio</a></li>
     <li><a href="early_history.html">Early History</a></li>
 
@@ -21,7 +182,6 @@
   </header>
   <main>
     <h1>Spring Expo (May 13th, 2019)</h1>
-    <a href="programs/20190513_ExpoS_OCO.pdf" target="_blank">Concert Program (PDF)</a>
   <div class="grid">
     <div class="card">
       <div class="info">
@@ -69,7 +229,6 @@
     </div>
   </div>
   <h1>Ann Schaffner Concert (May 10th, 2019)</h1>
-  <a href="programs/20190510_ASchaff_OCO.pdf" target="_blank">Concert Program (PDF)</a>
   <div class="grid">
     <div class="card">
       <div class="info">
@@ -128,7 +287,6 @@
     </div>
   </div>
   <h1>Candidates' Weekend (Febuary 22nd, 2019)</h1>
-  <a href="programs/20190222_CW_OCO.pdf" target="_blank">Concert Program (PDF)</a>
   <div class="grid">
     <div class="card">
       <div class="info">
