@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'DINOT';
+    src: url('DINOT.eot');
+    src: url('DINOT.eot?#iefix') format('embedded-opentype'),
+        url('DINOT.woff2') format('woff2'),
+        url('DINOT.woff') format('woff'),
+        url('DINOT.ttf') format('truetype'),
+        url('DINOT.svg#DINOT') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
