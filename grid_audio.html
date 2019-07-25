@@ -167,14 +167,80 @@
       -webkit-font-smoothing: antialiased;
       }
 
+      .downloadlink {
+        padding: 0em;
+        background-color: lightgray;
+        width: 100%;
+      }
+
+      .popuplink {
+        padding: 0em;
+        background-color: lightgray;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .popup {
+        background: rgba(0,0,0,.4);
+        cursor:pointer;
+        display:none;
+        height: 100%;
+        position:fixed;
+        text-align: center;
+        top:0;
+        width: 100%;
+        z-index: 10000;
+      }
+
+      .popup .helper{
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+
+      .popup > div {
+        background-color: #fff;
+        box-shadow: 10px 10px 60px #555;
+        display: inline-block;
+        height: auto;
+        max-width: 1fr;
+        min-height: 720px;
+        vertical-align: middle;
+        width: 85%;
+        position: relative;
+        border-radius: 8px;
+        padding: 10px 5%;
+      }
+
+      .popupclosebutton {
+        background-color: #fff;
+        border: 3px solid #999;
+        border-radius: 10px;
+        cursor: pointer;
+        display: inline-block;
+        /*font-family: ???
+        font-weight: normal
+        font-size; 25px*/
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+      }
+
+      .popupclosebutton:hover {
+        background-color: #ccc;
+      }
+
   </style>
 </head>
 <body style="background-color: #faf7f4;">
   <header>
     <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="grid_video.html">OCO Videos Ver.1</a></li>
-    <li><a href="grid_video2.html">OCO Videos Ver.2</a></li>
+    <li><a href="grid_video.html">OCO Videos</a></li>
     <li><a class="active_page" href="grid_audio.html">OCO Scores+Audio</a></li>
     <li><a href="early_history.html">Early History</a></li>
 
@@ -186,18 +252,28 @@
     <div class="card">
       <div class="info">
         <strong>Rondo from Serenade for Winds, K. 361</strong>
-        <p>Wolfgang Amadaeus Mozart</p>
+        <p>Wolfgang Amadaeus Mozart</p></div>
+      <div class="popuplink" align="center" onclick="HideShow('Audio1')">
+        <p><b>View Score & Audio Player</b></p>
       </div>
-      <button onclick="window.location.href = 'turn_audio.html';">View Score & Audio</button>
-      <button onclick="HideShow('Audio1')">Show Audio Player</button>
-      <div id="Audio1">
-        <iframe
-        frameborder="0"
-        width= "100%"
-        autoplay
-        controls="controls"
-        src="https://drive.google.com/file/d/1tPla3rFwe8ebkDsHZR-1n6adA8ZJOC8E/preview">
-        </iframe>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio1" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio1')">X</div>
+          <!--<iframe
+          frameborder="0"
+          width= "100%"
+          autoplay
+          controls="controls"
+          src="https://drive.google.com/file/d/1tPla3rFwe8ebkDsHZR-1n6adA8ZJOC8E/preview">
+        </iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
       </div>
 
     </div>
@@ -206,26 +282,56 @@
         <strong>Medley from Pirates of the Caribbean </strong>
         <p>K. Badelt & T. Rickets</p>
       </div>
-      <button onclick="HideShow('Audio2')">Show Audio Player</button>
-      <iframe id="Audio2"
-      frameborder="0"
-      width= "100%"
-      controls="controls"
-      src="https://drive.google.com/file/d/1lVu60qHonjLbB24hM-xim2ZIgQZ0vLFI/preview" >
-      </iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio2')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio2')">X</div>
+          <!--<iframe id="Audio2"
+          frameborder="0"
+          width= "100%"
+          controls="controls"
+          src="https://drive.google.com/file/d/1lVu60qHonjLbB24hM-xim2ZIgQZ0vLFI/preview" >
+          </iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
     <div class="card">
       <div class="info">
         <strong>Journey</strong>
         <p>Joseph Lee</p>
       </div>
-      <button onclick="HideShow('Audio3')">Show Audio Player</button>
-      <iframe id="Audio3"
-      frameborder="0"
-      width= "100%"
-      controls="controls"
-      src="https://drive.google.com/file/d/1XqAeKMDHtXsvOWt0T8iMap0wyg7y2Vid/preview" >
-      </iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio3')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio3')">X</div>
+          <!--<iframe id="Audio3"
+          frameborder="0"
+          width= "100%"
+          controls="controls"
+          src="https://drive.google.com/file/d/1XqAeKMDHtXsvOWt0T8iMap0wyg7y2Vid/preview" >
+          </iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <h1>Ann Schaffner Concert (May 10th, 2019)</h1>
@@ -235,57 +341,133 @@
         <strong>Medley from Pirates of the Caribbean</strong>
         <p>K. Badelt & T. Rickets</p>
       </div>
-      <button onclick="HideShow('Audio4')">Show Audio Player</button>
-      <iframe id="Audio4"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1p1cTN9yJniZbyuWmMwqGuxhsPJq6SjWN/preview" controls="controls"></iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio4')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio4')">X</div>
+          <!--<iframe id="Audio4"
+          frameborder="0"
+          width= "100%"
+          src="https://drive.google.com/file/d/1p1cTN9yJniZbyuWmMwqGuxhsPJq6SjWN/preview" controls="controls"></iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
     <div class="card">
       <div class="info">
         <strong>Rondo from the Serenade for Winds, K. 361</strong>
         <p>Wolfgang Amadaeus Mozart</p>
       </div>
-      <button onclick="HideShow('Audio5')">Show Audio Player</button>
-      <iframe id="Audio5"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1XR-1VvMtQRcp-d1XO-wqPZWSaI-fD230/preview" controls="controls"></iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio5')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio5')">X</div>
+          <!--<iframe id="Audio5"
+          frameborder="0"
+          width= "100%"
+          src="https://drive.google.com/file/d/1XR-1VvMtQRcp-d1XO-wqPZWSaI-fD230/preview" controls="controls"></iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
     <div class="card">
       <div class="info">
         <strong>Marche Hongroise from La Damnation de Faust</strong>
         <p>H. Berlioz</p>
       </div>
-      <button onclick="HideShow('Audio6')">Show Audio Player</button>
-      <iframe id="Audio6"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1I9CT0CepOK4o2Dx-7zHPtsXNLuMXq0hH/preview" controls="controls"></iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio6')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio6')">X</div>
+          <!--<iframe id="Audio6"
+          frameborder="0"
+          width= "100%"
+          src="https://drive.google.com/file/d/1I9CT0CepOK4o2Dx-7zHPtsXNLuMXq0hH/preview" controls="controls"></iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
     <div class="card">
       <div class="info">
         <strong>Waltz from the Serenade for String Orchestra, op. 48</strong>
         <p>P. I. Tchaikovsky</p>
       </div>
-      <button onclick="HideShow('Audio7')">Show Audio Player</button>
-      <iframe id="Audio7"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1Qa9UVV61ZtwEe6psLSivJresX_-k13EK/preview" controls="controls"></iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio7')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio7')">X</div>
+          <!--<iframe id="Audio7"
+          frameborder="0"
+          width= "100%"
+          src="https://drive.google.com/file/d/1Qa9UVV61ZtwEe6psLSivJresX_-k13EK/preview" controls="controls"></iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
     <div class="card">
       <div class="info">
         <strong>Danzon No. 2</strong>
         <p>A. Marquez</p>
       </div>
-      <button onclick="HideShow('Audio8')">Show Audio Player</button>
-      <iframe id="Audio8"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1FoYkGsdv0dz9-IUZIrspnBy9ka_eRhmq/preview" controls="controls"></iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio8')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio8')">X</div>
+          <!--<iframe id="Audio8"
+          frameborder="0"
+          width= "100%"
+          src="https://drive.google.com/file/d/1FoYkGsdv0dz9-IUZIrspnBy9ka_eRhmq/preview" controls="controls"></iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
+
   <h1>Candidates' Weekend (Febuary 22nd, 2019)</h1>
   <div class="grid">
     <div class="card">
@@ -293,32 +475,77 @@
         <strong>Rondo from the Serenade for Winds, K. 361</strong>
         <p>Wolfgang Amadaeus Mozart</p>
       </div>
-      <button onclick="HideShow('Audio9')">Show Audio Player</button>
-      <iframe id="Audio9"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1yc9UVxDaK3w9RXaCyKcvJJFK_3jGdj45/preview" controls="controls"></iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio9')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio9')">X</div>
+          <!--<iframe id="Audio9"
+          frameborder="0"
+          width= "100%"
+          src="https://drive.google.com/file/d/1yc9UVxDaK3w9RXaCyKcvJJFK_3jGdj45/preview" controls="controls"></iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
     <div class="card">
       <div class="info">
         <strong>Marche Hongroise from La Damnation de Faust</strong>
         <p>H. Berlioz</p>
       </div>
-      <button onclick="HideShow('Audio10')">Show Audio Player</button>
-      <iframe id="Audio10"
-      frameborder="0"
-      width= "100%"
-      src="https://drive.google.com/file/d/1_2vnJRhZHAQU5-tWNA1-9UDG_PGbtoJX/preview" controls="controls"></iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio10')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio10')">X</div>
+          <!--<iframe id="Audio10"
+          frameborder="0"
+          width= "100%"
+          src="https://drive.google.com/file/d/1_2vnJRhZHAQU5-tWNA1-9UDG_PGbtoJX/preview" controls="controls"></iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
     <div class="card">
       <div class="info">
         <strong>Medley from Pirates of the Caribbean</strong>
         <p>K. Badelt & T. Rickets</p>
       </div>
-      <button onclick="HideShow('Audio11')">Show Audio Player</button>
-      <iframe id="Audio11"
-      frameborder="0"
-      width= "100%"src="https://drive.google.com/file/d/15ZIhLo8fgLk2e02zYw_jvmGPCYAbS0gn/preview" controls="controls"></iframe>
+      <div class="popuplink" align="center" onclick="HideShow('Audio11')">
+        <p><b>View Score & Audio Player</b></p>
+      </div>
+      <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
+        <div class="downloadlink" align="center">
+          <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
+        </div>
+      </a>
+      <div id="Audio2" class="popup">
+        <span class="helper"></span>
+        <div>
+          <div class="popupclosebutton" onclick="HideShow('Audio11')">X</div>
+          <!--<iframe id="Audio11"
+          frameborder="0"
+          width= "100%"src="https://drive.google.com/file/d/15ZIhLo8fgLk2e02zYw_jvmGPCYAbS0gn/preview" controls="controls"></iframe>-->
+          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -343,6 +570,21 @@
       x.style.display = "none";
     }
   }
+
+  $(window).load(function(){
+
+    $('.popuplink').click(function(){
+      $('.popup').show();
+    });
+
+    $('.popup').click(function(){
+      $('.popup').hide();
+    });
+
+    $('.popupclosebutton').click(function(){
+      $('.popup').hide();
+    });
+  });
   </script>
   </main>
 </body>
