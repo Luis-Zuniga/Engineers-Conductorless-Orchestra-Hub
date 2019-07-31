@@ -7,6 +7,9 @@
   <meta name="keywords" content="OCO, Olin, Orchestra, Engineering Orchestra, Engineers">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OCO Audio Tiles</title>
+
+  <script type="text/javaScript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/turn.js"></script>
   <style>
 
       @font-face {
@@ -87,8 +90,18 @@
 
       a {
         font-family: din-ot,sans-serif;
-      font-style: normal;
-      font-weight:300;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      button {
+        font-family: din-ot,sans-serif;
+        font-style: normal;
+        font-weight:600;
+        border: 0;
+        background: none;
+        box-shadow: none;
+        border-radius: 0px;
       }
 
       iframe {
@@ -186,9 +199,9 @@
         display:none;
         height: 100%;
         position:fixed;
-        left:0;
         text-align: center;
         top:0;
+        left:0;
         width: 100%;
         z-index: 10000;
       }
@@ -223,8 +236,8 @@
         font-weight: normal
         font-size; 25px*/
         position: absolute;
-        top: -20px;
-        right: -20px;
+        top: 0px;
+        right: 0px;
         line-height: 30px;
         width: 30px;
         height: 30px;
@@ -254,28 +267,14 @@
       <div class="info">
         <strong>Rondo from Serenade for Winds, K. 361</strong>
         <p>Wolfgang Amadaeus Mozart</p></div>
-      <div class="popuplink" align="center" onclick="HideShow('Audio1')">
-        <p><b>View Score & Audio Player</b></p>
-      </div>
+      <form align="center" action="20190513WindSerenade.html" method="get" target="_blank">
+         <button class="popuplink" type="submit"><b>View Score & Audio Player</b></button>
+      </form>
       <a href="zips/20190513_ExpoS_Mozart_OCO.zip" download>
         <div class="downloadlink" align="center">
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio1" class="popup">
-        <span class="helper"></span>
-        <div>
-          <div class="popupclosebutton" onclick="HideShow('Audio1')">X</div>
-          <!--<iframe
-          frameborder="0"
-          width= "100%"
-          autoplay
-          controls="controls"
-          src="https://drive.google.com/file/d/1tPla3rFwe8ebkDsHZR-1n6adA8ZJOC8E/preview">
-        </iframe>-->
-          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
-        </div>
-      </div>
 
     </div>
     <div class="card">
@@ -295,13 +294,18 @@
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio2')">X</div>
-          <!--<iframe id="Audio2"
+          <div id="wrapper" style="position:absolute;width:50%;
+          margin: 0px 15vw;">
+
+          <!--<iframe
           frameborder="0"
           width= "100%"
           controls="controls"
-          src="https://drive.google.com/file/d/1lVu60qHonjLbB24hM-xim2ZIgQZ0vLFI/preview" >
-          </iframe>-->
-          <iframe src="20190513_ExpoS_Mozart_OCO.html" width="100%" height="100%"></iframe>
+          src="https://drive.google.com/uc?export=open&id=1X-qIxkr7AKaZ6xroMRRwmb-qTT8obyyL" >-->
+
+          <!--<iframe width="100%" height="200px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/658037042&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>-->
+
+          </div>
         </div>
       </div>
 
@@ -319,7 +323,7 @@
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio2" class="popup">
+      <div id="Audio3" class="popup">
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio3')">X</div>
@@ -350,7 +354,7 @@
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio2" class="popup">
+      <div id="Audio4" class="popup">
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio4')">X</div>
@@ -376,7 +380,7 @@
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio2" class="popup">
+      <div id="Audio5" class="popup">
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio5')">X</div>
@@ -402,7 +406,7 @@
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio2" class="popup">
+      <div id="Audio6" class="popup">
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio6')">X</div>
@@ -428,7 +432,7 @@
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio2" class="popup">
+      <div id="Audio7" class="popup">
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio7')">X</div>
@@ -454,7 +458,7 @@
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio2" class="popup">
+      <div id="Audio8" class="popup">
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio8')">X</div>
@@ -484,7 +488,7 @@
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio2" class="popup">
+      <div id="Audio9" class="popup">
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio9')">X</div>
@@ -510,7 +514,7 @@
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio2" class="popup">
+      <div id="Audio10" class="popup">
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio10')">X</div>
@@ -536,7 +540,7 @@
           <p><b>Download .zip (.PDF, .SIB & .WAV)</b></p>
         </div>
       </a>
-      <div id="Audio2" class="popup">
+      <div id="Audio11" class="popup">
         <span class="helper"></span>
         <div>
           <div class="popupclosebutton" onclick="HideShow('Audio11')">X</div>
@@ -550,8 +554,8 @@
     </div>
 
   </div>
+
   <script>
-  document.getElementById("Audio1").style.display="none";
   document.getElementById("Audio2").style.display="none";
   document.getElementById("Audio3").style.display="none";
   document.getElementById("Audio4").style.display="none";
@@ -563,29 +567,26 @@
   document.getElementById("Audio10").style.display="none";
   document.getElementById("Audio11").style.display="none";
 
-  function HideShow(ID) {
+
+  $(window).bind('keydown', function(e){
+
+    if (e.keyCode==37)
+      $('#Book1').turn('previous');
+    else if (e.keyCode==39)
+      $('#Book1').turn('next');
+  });
+
+
+  function HideShow(ID,ID2) {
     var x = document.getElementById(ID);
     if (x.style.display === "none") {
       x.style.display = "block";
     } else {
       x.style.display = "none";
     }
-  }
+  };
 
-  $(window).load(function(){
 
-    $('.popuplink').click(function(){
-      $('.popup').show();
-    });
-
-    $('.popup').click(function(){
-      $('.popup').hide();
-    });
-
-    $('.popupclosebutton').click(function(){
-      $('.popup').hide();
-    });
-  });
   </script>
   </main>
 </body>
