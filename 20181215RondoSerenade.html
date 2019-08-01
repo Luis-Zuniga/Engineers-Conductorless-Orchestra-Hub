@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="Homepage" content="Homepage for the Engineer's Conductorless Orchestra Project, dedicated to bringing music to engineering-inclined academic environments.">
+  <meta name="Author" content="Luis F. Zuniga">
+  <meta name="keywords" content="OCO, Olin, Orchestra, Engineering Orchestra, Engineers">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring Expo 2019</title>
+
+  <link rel="stylesheet" href="css/grid.css">
+  <script type="text/javaScript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/turn.js"></script>
+  <link rel="stylesheet" href="css/turnpage.css">
+
+  <style>
+
+      @font-face {
+      font-family: "din-ot";
+      src: url("olin_fonts/DIN-OT/DINOT.eot");
+      src: url("olin_fonts/DIN-OT/DINOT.woff") format("woff"),
+      url("olin_fonts/DIN-OT/DINOT.otf") format("opentype"),
+      url("olin_fonts/DIN-OT/DINOT.svg") format("svg");
+      }
+      @font-face {
+      font-family: "din-ot-med";
+      src: url("olin_fonts/DIN-OT/DINOT-Medium.eot");
+      src: url("olin_fonts/DIN-OT/DINOT-Medium.woff") format("woff"),
+      url("olin_fonts/DIN-OT/DINOT-Medium.otf") format("opentype"),
+      url("olin_fonts/DIN-OT/DINOT-Medium.svg") format("svg");
+      }
+      @font-face {
+      font-family: "din-ot-bold";
+      src: url("olin_fonts/DIN-OT/DINOT-Bold.eot");
+      src: url("olin_fonts/DIN-OT/DINOT-Bold.woff") format("woff"),
+      url("olin_fonts/DIN-OT/DINOT-Bold.otf") format("opentype"),
+      url("olin_fonts/DIN-OT/DINOT-Bold.svg") format("svg");
+      }
+      .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(200px, 375px));
+        grid-gap:.5em;
+        grid-auto-rows: minmax(5rem, auto);
+          }
+      .grid > div{
+        background:#0087c6;
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -mox-border-radius-topright: 10px;
+        -mox-border-radius-bottomright: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -mox-border-radius-topleft: 10px;
+        -mox-border-radius-bottomleft: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        overflow: hidden;
+        /*padding:1em;*/
+      }
+      .info{
+        padding:1em;
+        color: black;
+      }
+      .grid > div:nth-child(odd){
+        background:#0087c6;
+      }
+
+      h1 {
+        font-family: din-ot-bold,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      p {
+        font-family: din-ot,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      strong {
+        font-family: din-ot-med,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      ul {
+        font-family: din-ot-med,sans-serif;
+        font-style: normal;
+        font-weight:300;
+      }
+
+      a {
+        font-family: din-ot,sans-serif;
+      font-style: normal;
+      font-weight:300;
+      }
+
+      iframe {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        width: viewport;
+        -webkit-border-top-right-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -mox-border-radius-topright: 10px;
+        -mox-border-radius-bottomright: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -mox-border-radius-topleft: 10px;
+        -mox-border-radius-bottomleft: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      li {
+        float: left;
+      }
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+
+      /* Container holding the image and the text */
+      .container {
+      position: relative;
+      text-align: center;
+      color: white;
+      }
+      /* Centered text */
+      .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      }
+
+      .crop {
+      width: auto;
+      height: minmax(200px,500px);
+      overflow: hidden;
+
+      }
+
+      .crop img {
+      width: 400px;
+      height: 300px;
+      margin: -50px 0px -50px 0px;
+      filter: blur(1px);
+      }
+
+      .outline {
+      color: #fff;
+      text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+      -webkit-font-smoothing: antialiased;
+      }
+
+      .downloadlink {
+        padding: 0em;
+        background-color: lightgray;
+        width: 100%;
+      }
+
+      .popuplink {
+        padding: 0em;
+        background-color: lightgray;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .popup {
+        background: rgba(0,0,0,.4);
+        cursor:pointer;
+        display:none;
+        height: 100%;
+        position:fixed;
+        text-align: center;
+        top:0;
+        left:0;
+        width: 100%;
+        z-index: 10000;
+      }
+
+      .popup .helper{
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+
+      .popup > div {
+        background-color: #fff;
+        box-shadow: 10px 10px 60px #555;
+        display: inline-block;
+        height: auto;
+        max-width: 1fr;
+        min-height: 720px;
+        vertical-align: middle;
+        width: 85%;
+        position: relative;
+        border-radius: 8px;
+        padding: 10px 5%;
+      }
+
+      .popupclosebutton {
+        background-color: #fff;
+        border: 3px solid #999;
+        border-radius: 10px;
+        cursor: pointer;
+        display: inline-block;
+        /*font-family: ???
+        font-weight: normal
+        font-size; 25px*/
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+      }
+
+      .popupclosebutton:hover {
+        background-color: #ccc;
+      }
+
+  </style>
+</head>
+<body style="background-color: darkgrey;">
+  <header>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="grid_video2.html">OCO Videos</a></li>
+    <li><a class="active_page" href="grid_audio.html">OCO Scores+Audio</a></li>
+    <li><a href="early_history.html">Early History</a></li>
+
+    </ul>
+  </header>
+  <main>
+
+      <div id="wrapper" style="position:relative;width:50%;height:90vh;
+      margin: 0px 15vw;">
+      <div id="book" >
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_01.png');"><img src="images/turn_icon_right.png" style="width:90px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_02.png');"><img src="images/turn_icon_left_arrow.png" style="width:25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_03.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_04.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_05.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_06.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_07.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_08.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_09.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_10.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_11.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_12.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_13.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_14.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_15.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_16.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_17.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_18.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_19.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_20.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_21.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_22.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_23.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_24.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_25.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_26.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_27.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_28.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_29.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_30.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_31.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_32.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_33.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_34.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_35.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_36.png');"><img src="images/turn_icon_left_arrow.png" style="width: 25px" align="left"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_37.png');"><img src="images/turn_icon_right_arrow.png" style="width: 25px" align="right"></div>
+        <div style="background-image:url('scores/18-19/WindSerenade17/WS_Page_38.png');"></div>
+      </div>
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/658036043&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+      </div>
+  </main>
+  <script type="text/javascript">
+
+        $(window).ready(function()  {
+          $('#book').turn({
+            display: 'double',
+            acceleration: true,
+            elevation:500
+          });
+        });
+
+        $(window).bind('keydown', function(e){
+
+          if (e.keyCode==37)
+            $('#book').turn('previous');
+          else if (e.keyCode==39)
+            $('#book').turn('next');
+
+        });
+
+
+    </script>
+</body>
+</html>
